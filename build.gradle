@@ -1,0 +1,24 @@
+apply plugin: "java"
+
+jar {
+    baseName = "spring-core"
+    version = "0.0.1-SNAPSHOT"
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    ext {
+        springVersion = "5.0.2.RELEASE"
+    }
+    compile "org.springframework:spring-context:$springVersion"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "3.0"
+}

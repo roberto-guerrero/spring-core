@@ -1,0 +1,7 @@
+# Everything in the root directory
+/*
+
+# Except from
+!/src/
+!/build.gradle
+!/.gitignore
