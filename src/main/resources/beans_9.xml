@@ -5,8 +5,15 @@
        xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+    <!--Example 10: Context events-->
     <bean id = "helloWorld" class = "course.HelloWorld">
         <property name = "message" value = "Hello World!"/>
     </bean>
+    <bean id = "student" class = "course.Student">
+        <property name = "name" value = "Roberto"/>
+    </bean>
+
+    <bean id = "startEventHandler" class = "course.StartEventHandler"/>
+    <bean id = "stopEventHandler" class = "course.StopEventHandler"/>
 
 </beans>

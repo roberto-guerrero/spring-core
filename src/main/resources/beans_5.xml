@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--Example 5: Bean Inheritance-->
+    <bean id="helloMexico" class="course.HelloMexico">
+        <property name="message1" value="Hello Mexico!"/>
+        <property name="message2" value="Hello Second Mexico!"/>
+    </bean>
+
+    <bean id="helloIndia" class="course.HelloIndia" parent="helloMexico">
+        <property name="message1" value="Hello India"/>
+        <property name="message3" value="Namaste India!"/>
+    </bean>
+
+</beans>

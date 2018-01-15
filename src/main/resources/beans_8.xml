@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--Example 8: Dependency Injection - Constructor-->
+    <bean id="textEditorConstructor" class="course.TextEditorConstructor">
+        <constructor-arg ref="spellChecker"/>
+        <constructor-arg index="1" type="java.lang.String" value="123"/>
+    </bean>
+
+    <bean id="spellChecker" class="course.SpellChecker"></bean>
+
+</beans>
